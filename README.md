@@ -14,7 +14,7 @@ One way to host dbt projects and orchestrate dbt tasks is via Apache Airflow. In
 that will build and test data models will consist of two tasks, one that executes `dbt run` command followed by an 
 Airflow task that executes `dbt test`. 
 
-<img style="display: block; margin: 0 auto" src="docs/blob/dbt_run_test_dag.png" alt="test">
+
 
 But what happens when model builds or tests fail? Should we re-run the whole dbt project (that could involve hundreds of 
 different models and/or tests) just to run a single model we've just fixed? This doesn't seem to be a good practice 
@@ -31,7 +31,7 @@ dbt model, seed, snapshot or test will have its own Airflow Task so that you can
 
 Here's how the popular Jaffle Shop dbt project will be rendered on Apache Airflow via `dbt-airflow`:
 
-<img style="display: block; margin: 0 auto" src="docs/blob/dbt_jaffle_shop_dag.png" alt="test">
+
 
 
 ### Features
